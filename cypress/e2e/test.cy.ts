@@ -1,4 +1,4 @@
-import { getGroceryData } from "../support/test";
+import { getAllGroceryData, getGroceryDataById } from "../support/test";
 
 describe('First API test',()=> {
     it('Verify status code', () => {
@@ -7,6 +7,9 @@ describe('First API test',()=> {
         .should('equal',200);
     })
     it('verify get data', ()=> {
-        getGroceryData.checkDataFromAPI(4646)
+        getAllGroceryData.checkDataFromAPI(4646)
+    })
+    it('verify get by id data', () => {
+        getGroceryDataById.checkDataByID(1225)
     })
 })
